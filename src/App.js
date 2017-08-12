@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CommentBox from './CommentBox';
+
+var data = [
+  {author: "Pete Hunt", text: "This is one comment"},
+  {author: "Jordan Walke", text: "This is another comment"}
+];
 
 class App extends Component {
   render() {
@@ -11,7 +17,7 @@ class App extends Component {
           <h2>React with Node.js</h2>
         </div>
         <p className="App-intro">
-          Hello World!
+          <CommentBox data={data}/>
         </p>
       </div>
     );
